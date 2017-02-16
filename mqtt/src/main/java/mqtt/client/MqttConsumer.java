@@ -52,7 +52,7 @@ public class MqttConsumer {
 		}
 	}
 	
-	public void getMessage(String topicName) {
+	public void getMessage(String topicName, int qos) {
 		try {
 //			MqttTopic topic = client.getTopic(topicName);
 //			// setWill方法，如果项目中需要知道客户端是否掉线可以调用该方法。设置最终端口的通知消息
@@ -60,9 +60,9 @@ public class MqttConsumer {
 
 			client.connect(options);
 			// 订阅消息
-			int[] Qos = {1};
+			int[] qoss = {qos};
 			String[] topicFilter = {topicName};
-			client.subscribe(topicFilter, Qos);
+			client.subscribe(topicFilter, qoss);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
