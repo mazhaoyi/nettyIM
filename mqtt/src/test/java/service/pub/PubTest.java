@@ -27,8 +27,8 @@ public class PubTest {
 		// 组装message
 		MqttMessage message = new MqttMessage();
 		message.setId(666666);
-//		message.setPayload("努力有用的话，还要天才做什么！！！！！你的反抗，让我诗兴大发！！！！！".getBytes(Charset.forName("UTF-8")));
-		message.setPayload("让妲己看看你的心！".getBytes(Charset.forName("UTF-8")));
+		message.setPayload("努力有用的话，还要天才做什么！！！！！你的反抗，让我诗兴大发！！！！！".getBytes(Charset.forName("UTF-8")));
+//		message.setPayload("让妲己看看你的❤！".getBytes(Charset.forName("UTF-8")));
 		message.setQos(2);
 		message.setRetained(true);
 		
